@@ -1,0 +1,8 @@
+<p>Create New Pizza</p>
+<%=form_for @pizza do |f|%>
+
+    <p><%=f.text_field :name%></p>
+    <p><%=f.text_field :ingredients%></p>
+    <p><%=f.collection_select :restaurant_id, Restaurant.all,:id,:name%><p>
+<%=f.submit%>
+<%end%>
